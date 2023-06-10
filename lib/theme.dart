@@ -12,5 +12,18 @@ class AppTheme {
   static Color greyColor = const Color(0xff4F5A69);
   static Color blackColor = const Color(0xff303030);
 
-  static ThemeData lightTheme = ThemeData(primaryColor: primaryLightColor);
+  static ThemeData lightTheme = ThemeData(
+      primaryColor: primaryLightColor,
+      appBarTheme: AppBarTheme(
+          toolbarHeight: 80,
+          backgroundColor: primaryLightColor,
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35), bottomRight: Radius.circular(35)))),
+      textTheme: TextTheme(
+        displayMedium: TextStyle(fontSize: 25, fontWeight: FontWeight.w500, color: blackColor),
+        labelMedium: TextStyle(color: blackColor, fontSize: 17),
+        displayLarge: TextStyle(color: primaryLightColor, fontSize: 22, fontWeight: FontWeight.bold),
+        titleLarge: TextStyle(color: primaryLightColor, fontSize: 25, fontWeight: FontWeight.bold),
+        titleMedium: TextStyle(color: blackColor, fontSize: 18, fontWeight: FontWeight.bold),
+      ));
 }
